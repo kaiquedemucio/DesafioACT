@@ -45,8 +45,8 @@ public class CadastroTests {
 
     }
 
-    @Test
-    public void testLoginComUsuarioCriado() throws InterruptedException {
+   @Test
+    public void testLoginELoggoutComUsuarioCriado() throws InterruptedException {
         // Vou abrir o Chrome
         WebDriverManager.chromedriver().setup();
         WebDriver navegador = new ChromeDriver();
@@ -73,6 +73,21 @@ public class CadastroTests {
 
         // Vou clicar no botão Login com o ID igual a btnLogin
         navegador.findElement(By.id("btnLogin")).click();
+
+        // Clicar no botão OK
+        navegador.findElement(By.xpath("/html/body/div[2]/div/div[6]/button[1]")).click();
+
+        // Clicar no botão de logout
+        Thread.sleep(1000);
+        WebElement BTloggout = navegador.findElement(By.xpath("/html/body/div/section[2]/div/div/div[1]/div/ul/li[6]/a"));
+        if (BTloggout.isDisplayed()) {
+            By.xpath("/html/body/div/section[2]/div/div/div[1]/div/ul/li[6]/a").findElement(navegador).click();
+            Thread.sleep(1000);
+        }else {
+            Thread.sleep(1000);
+            By.xpath("/html/body/div/section[2]/div/div/div[1]/div/ul/li[6]/a").findElement(navegador).click();
+        }
+
     }
 
     @Test
