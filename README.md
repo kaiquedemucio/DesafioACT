@@ -29,7 +29,7 @@ A estratégia de testes envolve a execução de testes funcionais que cobrem a m
 ## Como executar
 **0** - instalar todos os items obrigatórios na maquina ( JDK, maven, Selenium, Git) e configurar o ambiente  
 **1** - realizar clone do projeto  
-**2** - no caminho src/test/java/Runnner executar classe runnerTest.java  
+**2** - no caminho src/test/java/CadastroTests executar classe CadastroTests.java  
 **3** - Os testes serão executados em ordem conforme documentação
  
 **Executar via terminal com Maven**
